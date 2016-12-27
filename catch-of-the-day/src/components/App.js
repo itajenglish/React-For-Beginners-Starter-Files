@@ -1,14 +1,17 @@
 import React from 'react';
+import Header from './Header'
+import Order from './Order'
+import Inventory from './Inventory'
 
-class App extends React.component{
-  render(){
+class App extends React.Component{
+  render() {
     return (
       <div className="catch-of-the-day">
         <div className="menu">
-          <Header />
+          <Header tagline="Fresh Sea Food Marget" />
         </div>
-      <Order />
-      <Inventory />
+        <Order />
+        <Inventory />
       </div>
     )
   }
