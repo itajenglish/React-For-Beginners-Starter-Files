@@ -2,12 +2,14 @@ import React from 'react';
 import { getFunName } from '../helpers';
 
 class StorePicker extends React.Component {
+  // first grab the text from the box
+  // second we're going to transiton from / to /store/:storeId
   goToStore(event) {
     event.preventDefault();
+    const storeId = this.storeInput.value;
+    this.context.router.transitionTo(`/store/${storeId}`);
     console.log("You changed the Url");
-    // first grab the text from the box
-    // second we're going to transiton from / to /store/:storeId
-    console.log(this.storeInput.value)
+    console.log(`Going to ${storeId}`)
   }
   render() {
     return(
@@ -18,6 +20,10 @@ class StorePicker extends React.Component {
       </form>
     )
   }
+}
+
+StorePicker.contextTypes = {
+  router: React.PropTypes.object
 }
 
 export default StorePicker;
