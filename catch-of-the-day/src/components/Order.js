@@ -33,9 +33,8 @@ class Order extends React.Component{
       return prevTotal;
     }, 0)
     return (
-      <div className="orde-wrap">
+      <div className="order-wrap">
         <h2>Your Order</h2>
-        <p>{orderIDs}</p>
         <ul className="order">
           {orderIDs.map(this.renderOrder)}
           <li className="total">
